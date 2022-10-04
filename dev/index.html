@@ -4,19 +4,44 @@
   <head>
     <meta charset="utf-8" />
     <title>&lt;my-element> Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="/app.js"></script>
     <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
+      :root {
+        --primary-color: #ebebeb;
+        --secondary-color-text: #FFF;
+        --size-default: 62.5%;
+        --theme-article: rgb(8, 8, 88);
       }
+      html {
+        font-size: var(--size-default);
+      }
+      body {
+        align-items: center;
+        box-sizing: border-box;
+        background-color: var(--primary-color);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      /* card-product {
+        --primary-color: var(--theme-article);
+        --secondary-color: var(--secondary-color-text);
+      } */
     </style>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <card-product 
+    titleProduct="Nike Zoom 2022"
+    subtitleProduct="Collection Nike Zoom" 
+    urlImg="https://i1.wp.com/www.zarpado.com/wp-content/uploads/2019/11/FA19_RN_ZOOM_PEGASUS_TURBO_2_MENS_SOLE_EXT_HFR5.jpg?resize=660%2C448"
+    descriptionProduct="Hey te presentamos estas super zapatillas Nike para que disfrutes cada paso en cualquier condición del camino. Pero lo mejor será lo llamativo que te volveras con este super modelo!"
+    priceProduct="$ 300.000"
+    textButton="Comprar"
+    ></card-product>
   </body>
 </html>

@@ -43,13 +43,14 @@ export class MyElement extends LitElement {
 
   constructor() {
     super();
-    this.name = 'World';
+    this.name = 'Adrian';
     this.count = 0;
   }
 
   render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
+      <h2>Bienvenido al curso de Lit-Element</h2>
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
       </button>
